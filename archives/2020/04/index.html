@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>【高质量C++/C总结1】高级数据类型枚举Enum | 憨豆酒的博客</title>
+  <title>Archives: 2020/4 | 憨豆酒的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="说在开始：我提炼了《C++ Primer》、《侯捷C++》、《高质量程序设计指南——C/C++语言》等资料中的重要部分，并总结成此博文。其中涉及到许多我个人对C++的理解，如若有不合理之处，还请朋友们多多指出，我会虚心接受每一个建议。同时，我将实现代码放到了我的GitHub上https://github.com/ModestBean/C-Samples，可供下载参考。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="【高质量C++&#x2F;C总结1】高级数据类型枚举Enum">
-<meta property="og:url" content="http://yoursite.com/2018/11/24/Content1_enum/index.html">
+  <meta name="description" content="怎么做其实更重要">
+<meta property="og:type" content="website">
+<meta property="og:title" content="憨豆酒的博客">
+<meta property="og:url" content="http://yoursite.com/archives/2020/04/index.html">
 <meta property="og:site_name" content="憨豆酒的博客">
-<meta property="og:description" content="说在开始：我提炼了《C++ Primer》、《侯捷C++》、《高质量程序设计指南——C/C++语言》等资料中的重要部分，并总结成此博文。其中涉及到许多我个人对C++的理解，如若有不合理之处，还请朋友们多多指出，我会虚心接受每一个建议。同时，我将实现代码放到了我的GitHub上https://github.com/ModestBean/C-Samples，可供下载参考。">
+<meta property="og:description" content="怎么做其实更重要">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-02-09T13:41:27.580Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【高质量C++&#x2F;C总结1】高级数据类型枚举Enum">
-<meta name="twitter:description" content="说在开始：我提炼了《C++ Primer》、《侯捷C++》、《高质量程序设计指南——C/C++语言》等资料中的重要部分，并总结成此博文。其中涉及到许多我个人对C++的理解，如若有不合理之处，还请朋友们多多指出，我会虚心接受每一个建议。同时，我将实现代码放到了我的GitHub上https://github.com/ModestBean/C-Samples，可供下载参考。">
+<meta name="twitter:title" content="憨豆酒的博客">
+<meta name="twitter:description" content="怎么做其实更重要">
   
     <link rel="alternative" href="/atom.xml" title="憨豆酒的博客" type="application/atom+xml">
   
@@ -169,206 +168,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Content1_enum" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      【高质量C++/C总结1】高级数据类型枚举Enum
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/04/23/Content1_enum/" class="archive-article-date">
+  	<time datetime="2020-04-23T11:21:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-23</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/04/23/Content1_enum/">《颠覆者》</a>
     </h1>
   
 
-        
-        <a href="/2018/11/24/Content1_enum/" class="archive-article-date">
-  	<time datetime="2018-11-24T11:21:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="说在开始："><a href="#说在开始：" class="headerlink" title="说在开始："></a>说在开始：</h2><p>我提炼了《C++ Primer》、《侯捷C++》、《高质量程序设计指南——C/C++语言》等资料中的重要部分，并总结成此博文。其中涉及到许多我个人对C++的理解，如若有不合理之处，还请朋友们多多指出，我会虚心接受每一个建议。同时，我将实现代码放到了我的GitHub上<a href="https://github.com/ModestBean/C-Samples" target="_blank" rel="noopener">https://github.com/ModestBean/C-Samples</a>，可供下载参考。<br><a id="more"></a></p>
-<h2 id="内容介绍"><a href="#内容介绍" class="headerlink" title="内容介绍"></a>内容介绍</h2><p>C++/C枚举是一组特定的符号变量，通常表示一系列相关内容，例如每周Week，Monday，Tuesday，Wednesday等。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">enum Week&#123;Monday,Tuesday,Wednesday,....,Sunday&#125;</span><br><span class="line">//使用枚举</span><br><span class="line">Week oneDay=Monday;</span><br></pre></td></tr></table></figure></p>
-<p>还可表示运动内容，例如Sport，Basketball，Football，Pingpang等。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">enum Sport&#123;Basketball,Football,Pingpang&#125;</span><br><span class="line">//使用枚举</span><br><span class="line">Sport likeSport=Basketball;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>（1）枚举元素具有默认值，默认情况下为0，1，2…….，以Week为例，Monday=0，Tuesday=1，Wednesday=2。</li>
-<li>（2）如若不想使用默认值，需在初始化时进行赋值 例如enum Sport{Basketball=2,Football=1,Pingpang=3}，个人认为此种情况很少用到，开发者关心的是符号变量的名称，很少关心其值为多少，在后面的编程例子中有所体现。</li>
-<li>（3）枚举类型可以转换为整型，但整型不一定可以强制转换为枚举类型。整型数值是连续的，Monday=0，Tuesday=1，也就是无论怎么转换都只是0~6之间的数值，而你要把数字10转换成Week中的成员，想必编译器也不知如何去做吧。<h2 id="枚举enum的使用场合，为什么使用枚举？"><a href="#枚举enum的使用场合，为什么使用枚举？" class="headerlink" title="枚举enum的使用场合，为什么使用枚举？"></a>枚举enum的使用场合，为什么使用枚举？</h2>此处我列举一个场景。很好理解：学校需要记录每人的信息，那么会有Person类，其中包括一项为报道所在周几，通常我们的编程习惯是这样的。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//定义星期</span><br><span class="line">const int Monday = 0;</span><br><span class="line">const int Tuesday = 1;</span><br><span class="line">const int Wednesday = 2;</span><br><span class="line">class Person &#123;</span><br><span class="line">public:</span><br><span class="line">	Person(const int inArriveDate) &#123;</span><br><span class="line">		this-&gt;arriveDate = inArriveDate;</span><br><span class="line">	&#125;</span><br><span class="line">	int arriveDate;</span><br><span class="line">&#125;;</span><br><span class="line">int main() &#123;</span><br><span class="line">	Person p(Monday);</span><br><span class="line">	printf(&quot;%d&quot;, p.arriveDate);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>有些人的编程习惯更坏，可能是这样的。这是新手编程时经常范的错误，大家注意。 不要出现神奇数字0,1,2,3,4.要有意义。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">public:</span><br><span class="line">	Person(int inArriveDate) &#123;</span><br><span class="line">		this-&gt;arriveDate = inArriveDate;</span><br><span class="line">	&#125;</span><br><span class="line">	int arriveDate;</span><br><span class="line">&#125;;</span><br><span class="line">int main() &#123;</span><br><span class="line">	Person p(0);</span><br><span class="line">	if (p.arriveDate == 0) &#123;</span><br><span class="line">		printf(&quot;星期一&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else if (p.arriveDate == 1) &#123;</span><br><span class="line">		printf(&quot;星期2&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>使用枚举enum后可以大大减少工作量，省去了开发人员赋值的过程，代码简洁，清晰，长度短，使用枚举后。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//定义枚举类型</span><br><span class="line">enum  Week &#123; Monday, Tuesday, Wednesday &#125;;</span><br><span class="line">class Person &#123;</span><br><span class="line">public:</span><br><span class="line">	Person(Week inArriveDate) &#123;</span><br><span class="line">		this-&gt;arriveDate = inArriveDate;</span><br><span class="line">	&#125;</span><br><span class="line">	Week arriveDate;</span><br><span class="line">&#125;;</span><br><span class="line">int main() &#123;</span><br><span class="line">	Person p(Monday);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>此处我只是想到了一种使用场景，其他情况，欢迎大家交流，在开发过程中，我们一定要多思考，不能一概而过。</p>
-<h2 id="其他代码实现"><a href="#其他代码实现" class="headerlink" title="其他代码实现"></a>其他代码实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">enum  GameResult&#123;//定义枚举类型</span><br><span class="line">	WIN,LOSE,CANEL</span><br><span class="line">&#125;;</span><br><span class="line">int main() &#123;</span><br><span class="line">	GameResult result;</span><br><span class="line">	for (int i = WIN; i &lt;= CANEL; i++) &#123;</span><br><span class="line">		result = GameResult(i);//强制类型转换</span><br><span class="line">		if (result == WIN) &#123;</span><br><span class="line">			cout &lt;&lt; &quot;WIN&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		if (result == LOSE) &#123;</span><br><span class="line">			cout &lt;&lt; &quot;LOSE&quot; ;</span><br><span class="line">		&#125;</span><br><span class="line">		if (result == CANEL) &#123;</span><br><span class="line">			cout &lt;&lt; &quot;CANEL&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt;  endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>觉得对您有用，谢谢支持<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/images/shouzhi.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/images/shou.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+        <div class="article-info info-on-right">
+          
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/高质量C-C总结//" class="article-tag-list-link color1">高质量C++/C总结</a>
+        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/24/Content1_enum/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
   
+    </div></section>
   
 
     
-      <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: 'c2691c7857c49fd25e5e',
-  	clientSecret: 'b01629d6a585b5c72ac267fbb7efa5a7ddc6e4e3',
-  	repo: 'modestbean.github.io',
-  	owner: 'modestbean',
-  	admin: ['modestbean'],
-  	id: 'Sat Nov 24 2018 19:21:21 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
-      
-
-
-
-  
-  
-  
-
-  
-
-  
-
-  
-
 
 
           </div>
@@ -397,8 +250,8 @@ gitalk.render('gitalk-container')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
