@@ -189,7 +189,7 @@ body {
   font-size: 14px;
   line-height: 2;
   color: #555;
-  background: #eee;
+  background: #f5f7f9;
 }
 @media (max-width: 767px) {
   body {
@@ -445,7 +445,7 @@ body {
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: calc(100% - 252px);
+  width: 700px;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -457,7 +457,7 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: calc(100% - 252px);
+  width: 700px;
 }
 @media (min-width: 1600px) {
   .container .main-inner {
@@ -474,7 +474,7 @@ body {
 .footer-inner {
   box-sizing: border-box;
   margin: 20px auto;
-  width: calc(100% - 252px);
+  width: 700px;
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #adc7ff;
+  background: #37cfff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2346,6 +2346,16 @@ pre .javascript .function {
   transform: translate(-50%, -50%);
   color: #ccc;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .busuanzi-count {
+    width: auto;
+  }
+}
+@media (max-width: 767px) {
+  .busuanzi-count {
+    width: auto;
+  }
+}
 .site-uv,
 .site-pv,
 .page-pv {
@@ -2589,7 +2599,7 @@ pre .javascript .function {
 .header {
   position: relative;
   margin: 0 auto;
-  width: 75%;
+  width: 960px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .header {
@@ -2608,7 +2618,7 @@ pre .javascript .function {
   padding: 0;
   width: 240px;
   background: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  box-shadow: initial;
   border-radius: initial;
 }
 @media (min-width: 1600px) {
@@ -2649,7 +2659,7 @@ pre .javascript .function {
   }
 }
 .container .main-inner {
-  width: 75%;
+  width: 960px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .container .main-inner {
@@ -2665,10 +2675,10 @@ pre .javascript .function {
   float: right;
   box-sizing: border-box;
   padding: 40px;
-  width: calc(100% - 252px);
+  width: 700px;
   background: #fff;
   min-height: 700px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  box-shadow: initial;
   border-radius: initial;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2691,7 +2701,7 @@ pre .javascript .function {
   float: left;
   margin-top: 300px;
   width: 240px;
-  background: #eee;
+  background: #f5f7f9;
   box-shadow: none;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2708,7 +2718,7 @@ pre .javascript .function {
   display: none;
 }
 .footer-inner {
-  width: 75%;
+  width: 960px;
   padding-left: 260px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2849,7 +2859,7 @@ pre .javascript .function {
   width: 240px;
   color: #555;
   background: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
+  box-shadow: initial;
   border-radius: initial;
   opacity: 0;
 }
@@ -2976,163 +2986,22 @@ pre .javascript .function {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.content-wrap {
-  padding: initial;
-  background: initial;
-  box-shadow: initial;
-  border-radius: initial;
-}
-.post-block {
-  padding: 40px;
-  background: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
-  border-radius: initial;
-}
-#posts > article + article .post-block {
-  margin-top: 12px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  border-radius: initial;
-}
-.comments {
-  padding: 40px;
-  margin: initial;
-  margin-top: 12px;
-  background: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  border-radius: initial;
-}
-.posts-expand {
-  padding-top: initial;
-}
-.post-nav-divider {
-  width: 4%;
-}
-.post-nav-item {
-  width: 48%;
-}
-.post-eof,
-.post-spread {
-  display: none !important;
-}
-.pagination {
-  margin: 12px 0 0;
-  border-top: initial;
-  background: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  border-radius: initial;
-  padding: 10px 0 10px;
-}
-.pagination .prev,
-.pagination .next,
-.pagination .page-number {
-  margin-bottom: initial;
-  top: initial;
-}
-.main {
-  padding-bottom: initial;
-}
-.footer {
-  bottom: auto;
-}
-.post-header h1,
-.post-header h2 {
-  margin: initial;
-}
-.posts-expand .post-title-link {
-  line-height: inherit;
-}
-.posts-expand .post-title {
-  font-size: 1.7em;
-}
-.post-body h1 {
-  font-size: 1.6em;
-  border-bottom: 1px solid #eee;
-}
-.post-body h2 {
-  font-size: 1.45em;
-  border-bottom: 1px solid #eee;
-}
-.post-body h3 {
-  font-size: 1.3em;
-  border-bottom: 1px dotted #eee;
-}
-.post-body h4 {
-  font-size: 1.2em;
-}
-.post-body h5 {
-  font-size: 1.07em;
-}
-.post-body h6 {
-  font-size: 1.03em;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .content-wrap {
-    padding: 10px;
-  }
-  .posts-expand {
-    margin: initial;
-  }
-  .posts-expand .post-button {
-    margin-top: 20px;
-  }
-  .post-block {
-    padding: 20px;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-    border-radius: initial;
-  }
-  #posts > article + article .post-block {
-    margin-top: 10px;
-  }
-  .comments {
-    margin-top: 10px;
-    padding: 10px 20px;
-  }
-  .pagination {
-    margin: 10px 0 0;
-  }
-}
 @media (max-width: 767px) {
-  .content-wrap {
-    padding: 8px;
-  }
-  .posts-expand {
-    margin: initial;
-  }
-  .posts-expand .post-button {
-    margin-top: 12px;
-  }
-  .posts-expand img {
-    padding: initial !important;
-  }
-  .post-block {
-    padding: 12px;
-    min-height: auto;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-    border-radius: initial;
-  }
-  #posts > article + article .post-block {
-    margin-top: 8px;
-  }
-  .comments {
-    margin-top: 8px;
-    padding: 0 12px;
-  }
-  .pagination {
-    margin: 8px 0 0;
+  .post-body {
+    text-align: justify;
   }
 }
-@font-face {
-  font-family: "iconfont";
-  src: url("iconfont.eot?t=1598947634119"); /* IE9 */
-  src: url("iconfont.eot?t=1598947634119#iefix") format('embedded-opentype'), url("data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMIAAsAAAAABtAAAAK7AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqBXIFbATYCJAMICwYABCAFhG0HLxsABhHVk8FkPw9stykFDghriQwoP1loFcvHBvc9eOL1qDf5k3iP0K4PYnUuZXWU6sAGHCWwcaKzbAfA5lx9W6Mi1Eju/Oaf/CAlSPPoE/dO/wQKZL7zLse1N03qAowDKcC9MIqsQALwiBvGLniB9yFAQCEqIC1apXXAQ7GXCSAjhg7ui1eIoCjLewhOw15FFgCeNdO6BsyPPi9fqSYeWNgGu6nNoJYDaPJhlVNkJsQTGhBIl3MB7BAYoAKgIB0aMxkYhHEMQUYpBseqF/iwKo4DG3LUHw9xsGsjAApAyTNJPdmjiloAKIyHVkCvSZvA1HHdUcs3ldrWooWE0V+MOi+7V2bPvRwTZpfffVg6dwwulNhyj3DpvQ737uVYej/15sPcHZc/zLerWbsGnbv3CDt2Du0eQYdOgR0WyTD7p/0e/nSj7u/glB9dpUmW9O5J5+pLiX+fZ6UZXrR6daBmziZ6VQvPKJlYocWgblWyt4+GJTfb7W+6om6PneXOZnGB8U9Hy5JmuduObLt5aVJqep+UnCk55BFNAIjPmyOm5r/9Dq/XN0zunbnBfy9UAJ6OLlYNhuLzyjAfeHfgFfiT0oF9ashtq6WatLFg0Qpzhy0BARCDA9l4MdWQ87YLgkfOm/e5FMxg8ChBKlsBNiE14ODRGAHlSTwckp2RGER9oBxTAYQs7IdFJk7CkIXrpLLPYZOL73DIIgYBnST7mSGlRLJSwo3xhP0H9shJuXaWcf0V9StslJdH3CdSs3EYu6GcXzEhLbGhvfXErEBRjrCAxzCEDIWyw4M7w1zmvldNL+qOHIUUEm6MJ+w/sEdOKhjOsvL+K+pX2Kijpy7+RGp2chi7YQC5atKgnkd5pr31xKxAUY6wABcGJ5OhNM9yeHBnJqTK3KNBaqim214X/+4IEAjbaF2cKQb+xpqXEAA=") format('woff2'), url("iconfont.woff?t=1598947634119") format('woff'), url("iconfont.ttf?t=1598947634119") format('truetype'), url("iconfont.svg?t=1598947634119#iconfont") format('svg'); /* iOS 4.1- */
+.headband {
+  height: 3px;
+  background: #febe85;
 }
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: inherit;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.site-meta {
+  padding: 20px 0;
+  color: #fff;
+  background: #febe85;
 }
-.icon-zhihu:before {
-  content: "\e69a";
+.site-subtitle {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #fff;
 }
